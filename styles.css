@@ -1,0 +1,274 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff6b6b, #ffa5a5);
+    z-index: -1;
+}
+
+#corazones-3d {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+header {
+    padding: 100px 0px 0px 0px;
+}
+
+header h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    margin: 0;
+    animation: brillo 2s infinite;
+}
+
+header p {
+    font-size: 3.2rem;
+    padding: 0px 130px;
+}
+
+section {
+    padding: 20px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 1000px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.1rem;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    animation: brillo 2s infinite;
+}
+
+button:hover {
+    background-color: #ff4c4c;
+}
+
+@keyframes brillo {
+    0% { filter: brightness(1); }
+    50% { filter: brightness(1.2); }
+    100% { filter: brightness(1); }
+}
+
+.tarjetas {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.tarjeta {
+    width: 250px; /* Más grande */
+    height: 350px; /* Más grande */
+    perspective: 1000px; /* Para el efecto 3D */
+    cursor: pointer;
+    position: relative;
+}
+
+.tarjeta .frente,
+.tarjeta .reverso {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden; /* Oculta la parte de atrás */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    transition: transform 0.6s;
+    padding: 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluye el padding en el tamaño */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+.tarjeta .frente {
+    background: linear-gradient(135deg, #ff6b6b, #ffa5a5); /* Fondo degradado */
+    transform: rotateY(0deg);
+    font-size: 1.8rem; /* Tamaño de fuente más grande */
+    color: white;
+    text-align: center;
+    font-family: 'Great Vibes', cursive; /* Fuente romántica */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Borde sutil */
+    animation: latido 2s infinite; /* Animación de latido */
+}
+
+.tarjeta .reverso {
+    background: linear-gradient(135deg, #ffa5a5, #ff6b6b); /* Fondo degradado */
+    color: white;
+    transform: rotateY(180deg);
+    font-size: 1.2rem; /* Tamaño de fuente más pequeño */
+    text-align: center;
+    font-family: 'Poppins', sans-serif; /* Fuente legible */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Borde sutil */
+}
+
+.tarjeta:hover .frente {
+    transform: rotateY(180deg);
+}
+
+.tarjeta:hover .reverso {
+    transform: rotateY(0deg);
+}
+
+/* Animación de latido */
+@keyframes latido {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Efecto de brillo al pasar el mouse */
+.tarjeta:hover .frente,
+.tarjeta:hover .reverso {
+    box-shadow: 0 12px 24px rgba(255, 107, 107, 0.5);
+}
+
+footer {
+    background-color: rgba(255, 107, 107, 0.8);
+    padding: 20px;
+    font-size: 1.1rem;
+}
+
+.neon-text {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow:
+        0 0 5px #ff6b6b,
+        0 0 10px #ff6b6b,
+        0 0 20px #ff6b6b,
+        0 0 40px #ff6b6b;
+    animation: brillo-neon 1.5s infinite alternate;
+}
+
+@keyframes brillo-neon {
+    0% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+#tiempo-juntos {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 1000px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#tiempo-transcurrido {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tiempo-item {
+    background: rgba(255, 107, 107, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    min-width: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tiempo-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(255, 107, 107, 0.5);
+}
+
+.tiempo-item span {
+    display: block;
+}
+
+.tiempo-item span:first-child {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.tiempo-item .tiempo-label {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Poppins', sans-serif;
+    margin-top: 5px;
+}
+
+.contenido p {
+    font-size: 1.5rem;
+    padding: 0px 30px;
+}
+
+.ult-frase {
+    font-size: 1.5rem;
+    padding: 0px 30px;
+}
+
+/* Estilo base del título */
+#titulo-especial {
+    font-family: 'Great Vibes', cursive;
+    font-size: 10rem;
+    color: #dd3131;
+    display: flex; /* Para que las letras estén en línea */
+    justify-content: center;
+    gap: 5px; /* Espacio entre letras */
+}
+
+/* Estilo de cada letra */
+#titulo-especial span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-100%);
+    animation: caer 0.5s forwards;
+}
+
+/* Animación de caída */
+@keyframes caer {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Retraso para cada letra */
+#titulo-especial span:nth-child(1) { animation-delay: 0.1s; }
+#titulo-especial span:nth-child(2) { animation-delay: 0.2s; }
+#titulo-especial span:nth-child(3) { animation-delay: 0.3s; }
+#titulo-especial span:nth-child(4) { animation-delay: 0.4s; }
+#titulo-especial span:nth-child(5) { animation-delay: 0.5s; }
+#titulo-especial span:nth-child(6) { animation-delay: 0.6s; }
+#titulo-especial span:nth-child(7) { animation-delay: 0.7s; }
