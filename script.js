@@ -1,5 +1,5 @@
 // Texto que se escribe solo
-const texto = "Sé que te tengo pero seguiré tratando de consquistar tu corazoncito todos los dias, porque de verdad te quiero para toda la vida ❤️. Me seguiré enamorando de ti, todos los dias, porque no puedo evitar sonreir cuando pienso en ti, porque al mirarte confirmó que eres todo o que quiero en mi vida.";
+const texto = "Sé que te tengo pero seguiré tratando de consquistar tu corazoncito todos los dias, porque de verdad te quiero para toda la vida ❤️. Me seguiré enamorando de ti, todos los dias, porque no puedo evitar sonreir cuando pienso en ti, porque al mirarte confirmó que eres todo lo que quiero en mi vida.";
 const elementoTexto = document.getElementById('texto-automatico');
 let index = 0;
 
