@@ -272,3 +272,91 @@ footer {
 #titulo-especial span:nth-child(5) { animation-delay: 0.5s; }
 #titulo-especial span:nth-child(6) { animation-delay: 0.6s; }
 #titulo-especial span:nth-child(7) { animation-delay: 0.7s; }
+
+@media (max-width: 768px) {
+    /* Ajustes generales */
+    body {
+        font-size: 16px; /* Tamaño de fuente base más pequeño */
+    }
+
+    header {
+        padding: 50px 10px 0px 10px; /* Menos padding en móviles */
+    }
+
+    header h1 {
+        font-size: 4rem; /* Tamaño más pequeño para móviles */
+    }
+
+    header p {
+        font-size: 1.5rem; /* Tamaño más pequeño para móviles */
+        padding: 0px 20px; /* Menos padding en móviles */
+    }
+
+    section {
+        padding: 20px 10px; /* Menos padding en móviles */
+        max-width: 95%; /* Más ancho en móviles */
+    }
+
+    h2 {
+        font-size: 2.5rem; /* Tamaño más pequeño para móviles */
+    }
+
+    button {
+        font-size: 0.9rem; /* Tamaño más pequeño para móviles */
+        padding: 8px 16px; /* Menos padding en móviles */
+    }
+
+    .tarjetas {
+        flex-direction: column; /* Tarjetas en columna en móviles */
+        align-items: center; /* Centrar tarjetas */
+    }
+
+    .tarjeta {
+        width: 90%; /* Ocupa casi todo el ancho en móviles */
+        height: 200px; /* Altura más pequeña para móviles */
+        margin-bottom: 20px; /* Espacio entre tarjetas */
+    }
+
+    .tarjeta .frente {
+        font-size: 1.5rem; /* Tamaño más pequeño para móviles */
+    }
+
+    .tarjeta .reverso {
+        font-size: 1rem; /* Tamaño más pequeño para móviles */
+    }
+
+    #tiempo-juntos {
+        padding: 20px 10px; /* Menos padding en móviles */
+    }
+
+    .tiempo-item {
+        min-width: 80px; /* Menos ancho en móviles */
+        padding: 10px; /* Menos padding en móviles */
+    }
+
+    .tiempo-item span:first-child {
+        font-size: 2rem; /* Tamaño más pequeño para móviles */
+    }
+
+    .tiempo-item .tiempo-label {
+        font-size: 0.9rem; /* Tamaño más pequeño para móviles */
+    }
+
+    .contenido p {
+        font-size: 1.2rem; /* Tamaño más pequeño para móviles */
+        padding: 0px 10px; /* Menos padding en móviles */
+    }
+
+    .ult-frase {
+        font-size: 1.2rem; /* Tamaño más pequeño para móviles */
+        padding: 0px 10px; /* Menos padding en móviles */
+    }
+
+    #titulo-especial {
+        font-size: 5rem; /* Tamaño más pequeño para móviles */
+    }
+
+    .neon-text {
+        font-size: 2rem; /* Tamaño más pequeño para móviles */
+    }
+}
